@@ -13,42 +13,28 @@ import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
-/**
- * Created by jt on 2019-05-12.
- */
-
+/** Created by jt on 2019-05-12. */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class BeerDto {
 
-    @Null
-    private UUID id;
+  @Null private UUID id;
 
-    @Null
-    private Integer version;
+  @Null private Integer version;
 
-    @Null
-    private OffsetDateTime createdDate;
+  @Null private OffsetDateTime createdDate;
 
-    @Null
-    private OffsetDateTime lastModifiedDate;
+  @Null private OffsetDateTime lastModifiedDate;
 
-    @NotBlank
-    private String beerName;
+  @NotBlank private String beerName;
 
-    @NotNull
-    private BeerStyleEnum beerStyle;
+  @NotNull private BeerStyleEnum beerStyle;
 
-    @Positive
-    @NotNull
-    private Long upc;
+  @Positive @NotNull private Long upc;
 
-    @Positive
-    @NotNull
-    private BigDecimal price;
+  @Positive @NotNull private BigDecimal price;
 
-    private Integer quantityOnHand;
-
+  private Integer quantityOnHand;
 }
