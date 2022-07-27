@@ -1,17 +1,17 @@
 package guru.springframework.sfgrestdocsexample.web.model;
 
+import java.math.BigDecimal;
+import java.time.OffsetDateTime;
+import java.util.UUID;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Null;
-import jakarta.validation.constraints.Positive;
-import java.math.BigDecimal;
-import java.time.OffsetDateTime;
-import java.util.UUID;
 
 /** Created by jt on 2019-05-12. */
 @Data
@@ -28,7 +28,9 @@ public class BeerDto {
 
   @Null private OffsetDateTime lastModifiedDate;
 
-  @NotBlank private String beerName;
+  @NotBlank
+  @Size(min = 3, max = 100)
+  private String beerName;
 
   @NotNull private BeerStyleEnum beerStyle;
 
@@ -36,5 +38,5 @@ public class BeerDto {
 
   @Positive @NotNull private BigDecimal price;
 
-  private Integer quantityOnHand;
+  @Positive private Integer quantityOnHand;
 }

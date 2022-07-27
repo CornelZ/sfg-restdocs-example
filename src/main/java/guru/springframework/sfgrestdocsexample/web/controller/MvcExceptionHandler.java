@@ -1,13 +1,12 @@
 package guru.springframework.sfgrestdocsexample.web.controller;
 
-import jakarta.validation.ConstraintViolationException;
+import java.util.ArrayList;
+import java.util.List;
+import javax.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /** Created by jt on 2019-05-25. */
 @ControllerAdvice
